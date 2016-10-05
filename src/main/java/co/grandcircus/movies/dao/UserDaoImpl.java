@@ -18,7 +18,7 @@ import co.grandcircus.movies.model.User;
 /**
  * Responsibility: To provide access to all the users.
  */
-@Repository
+//@Repository
 public class UserDaoImpl implements UserDao {
 	
 	private int nextId = 1;
