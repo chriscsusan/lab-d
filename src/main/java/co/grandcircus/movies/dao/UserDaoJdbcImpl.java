@@ -184,7 +184,7 @@ public class UserDaoJdbcImpl implements UserDao{
 	}
 	@Override
 	public User getUserByEmailAndPassword(String email, String password){
-		String sql = "SELECT * FROM users WHERE email = ?, password = ?";
+		String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
 		try (Connection connection = connectionFactory.getConnection();
 				PreparedStatement statement = connection.prepareStatement(sql)) {
 			statement.setString(1, email);
