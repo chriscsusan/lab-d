@@ -17,5 +17,8 @@
 <a href="<c:url value="/movies"/>">Movies</a>
 <a href="<c:url value="/categories"/>">Categories</a>
 <a href="<c:url value="/users"/>">Users</a>
+<a href="<c:url value="/users/login"/>">User Login</a>
+<a href="<c:url value="/sun"/>">Sun Stuff</a>
+<a href="<c:url value="/holiday"/>">Holidays</a>
 </body>
 </html>

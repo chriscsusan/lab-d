@@ -1,7 +1,3 @@
-/*
- * Source Material (c) 2016 GCD
- * All rights reserved
- */
 package co.grandcircus.movies.controller;
 
 import java.util.Locale;
@@ -13,28 +9,30 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import co.grandcircus.movies.rest.SunService;
+import co.grandcircus.movies.rest.HolidayService;
 
-
+/**
+ * Handles requests for the weather page.
+ */
 @Controller
-public class SunController {
+public class HolidayController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(SunController.class);
+	private static final Logger logger = LoggerFactory.getLogger(HolidayController.class);
 	
 	@Autowired
-	private SunService sunService;
+	private HolidayService holidayService;
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping("/sun")
+	@RequestMapping("/holiday")
 	public String home(Locale locale, Model model) {
-		// add the 'weather' variable to the JSP
-		model.addAttribute("sunInfo", sunService.getCurrentSunStatsAtGrandCircus());
 		
-		logger.info("/suns -> sun-stats.jsp");
-		// select to use the weather.jsp view
-		return "sun-stats";
+		model.addAttribute("holiday", holidayService.getCurrentHolidays());
+		
+		logger.info("/holiday -> holiday.jsp");
+		
+		return "holiday";
 	}
 	
 }

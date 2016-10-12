@@ -34,6 +34,7 @@
 		<tr>
 			<td><a href="<c:url value="/users/${user.id}"/>"><c:out value="${ user.firstName }"/> <c:out value="${ user.lastName }"/></a></td>
 			<td><c:out value="${ user.email }"/></td>
+			
 		</tr>
 	</c:forEach>
 </table>

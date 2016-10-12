@@ -102,6 +102,16 @@ public class UserController {
 		return "user-create";
 	}
 	
+	@RequestMapping(value = "/users/login", method = RequestMethod.GET)
+	public String getUserByEmailAndPassword(Model model) {
+		model.addAttribute("user", new User());
+		
+		
+		
+		logger.info("GET /users/login -> user-login.jsp");
+		return "user-login";
+	}
+	
 	/**
 	 * Save new user
 	 */
@@ -113,5 +123,8 @@ public class UserController {
 		logger.info("POST /users/create -> redirect to /users");
 		return "redirect:/users";
 	}
+	
+	
+	
 	
 }

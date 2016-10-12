@@ -42,7 +42,7 @@ public class MovieController {
 		} else {
 			movies = movieDao.getAllMovies();
 		}
-		
+		   
 		model.addAttribute("movies",movies);
 
 		logger.info("/movies -> movie-list.jsp");
